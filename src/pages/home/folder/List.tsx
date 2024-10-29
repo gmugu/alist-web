@@ -11,6 +11,7 @@ import {
 } from "~/store"
 import { OrderBy } from "~/store"
 import { Col, cols, ListItem } from "./ListItem"
+import { ItemCheckbox } from "./helper"
 
 const ListLayout = () => {
   const t = useT()
@@ -45,7 +46,7 @@ const ListLayout = () => {
       <HStack class="title" w="$full" p="$2">
         <HStack w={cols[0].w} spacing="$1">
           <Show when={checkboxOpen()}>
-            <Checkbox
+            <ItemCheckbox
               checked={allChecked()}
               indeterminate={isIndeterminate()}
               onChange={(e: any) => {

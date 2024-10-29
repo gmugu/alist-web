@@ -14,6 +14,7 @@ import {
 import { ObjType, StoreObj } from "~/types"
 import { bus, formatDate, getFileSize, hoverColor } from "~/utils"
 import { getIconByObj } from "~/utils/icon"
+import { ItemCheckbox } from "./helper"
 
 export interface Col {
   name: OrderBy
@@ -71,7 +72,7 @@ export const ListItem = (props: { obj: StoreObj; index: number }) => {
       >
         <HStack class="name-box" spacing="$1" w={cols[0].w}>
           <Show when={checkboxOpen()}>
-            <Checkbox
+            <ItemCheckbox
               // colorScheme="neutral"
               // @ts-ignore
               on:click={(e) => {

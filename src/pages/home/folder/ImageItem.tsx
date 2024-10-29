@@ -8,6 +8,7 @@ import { checkboxOpen, getMainColor, selectAll, selectIndex } from "~/store"
 import { ObjType, StoreObj } from "~/types"
 import { bus } from "~/utils"
 import { getIconByObj } from "~/utils/icon"
+import { ItemCheckbox } from "./helper"
 
 export const ImageItem = (props: { obj: StoreObj; index: number }) => {
   const { isHide } = useUtil()
@@ -61,7 +62,7 @@ export const ImageItem = (props: { obj: StoreObj; index: number }) => {
       >
         <Center w="$full" pos="relative">
           <Show when={showCheckbox()}>
-            <Checkbox
+            <ItemCheckbox
               pos="absolute"
               left="$1"
               top="$1"
