@@ -201,7 +201,7 @@ export const setLayout = (layout: LayoutType) => {
 
 const [_checkboxOpen, setCheckboxOpen] = createStorageSignal<string>(
   "checkbox-open",
-  "false",
+  "true",
 )
 export const checkboxOpen = () => _checkboxOpen() === "true"
 
